@@ -6,10 +6,15 @@ import Layout from './layout';
 
 export default class postLayout extends Component {
   render() {
+    const { markdownRemark } = this.props.data;
+
     return (
         <Layout>
             <div>
-                <h1>Pos Layout</h1>
+                <h1>{markdownRemark.frontmatter.title }</h1>
+                <div dangerouslySetInnerHTML={{
+                  __html: markdownRemark.html
+                }} />
             </div>
         </Layout>
     )
@@ -17,10 +22,10 @@ export default class postLayout extends Component {
 }
 
 export const query = graphql`
-  query PostQuery {
+  query PostQuery($slug: String!) {
     markdownRemark(frontmatter: {
       slug: {
-        eq: "/third-post"
+        eq: $slug
       }
     }) {
       html
@@ -32,3 +37,6 @@ export const query = graphql`
     }
   }
 `
+/** eq: &slug
+ * make is a referance to the slag in createPage .context from gatsby-node
+*/
