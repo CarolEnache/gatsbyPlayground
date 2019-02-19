@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
-import layout from './layout'
+import { graphql } from 'gatsby'; 
 import Layout from './layout';
+
+
 
 export default class postLayout extends Component {
   render() {
@@ -13,3 +15,20 @@ export default class postLayout extends Component {
     )
   }
 }
+
+export const query = graphql`
+  query PostQuery {
+    markdownRemark(frontmatter: {
+      slug: {
+        eq: "/third-post"
+      }
+    }) {
+      html
+      frontmatter {
+        title
+        date
+        slug
+      }
+    }
+  }
+`
