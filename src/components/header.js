@@ -6,7 +6,7 @@ import styled from 'styled-components'
 import gatsbyLogo from '../images/gatsby-icon.png'
 
 const HeaderWrapper = styled.div`
-  background: #524763;
+  background-color: #524763;
   margin-bottom: 1.45rem;
 `;
 
@@ -43,12 +43,12 @@ const Header = ({ siteTitle }) => (
   </HeaderWrapper>
 )
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
+// Header.propTypes = {
+//   siteTitle: PropTypes.string,
+// }
 
-Header.defaultProps = {
-  siteTitle: ``,
-}
+// Header.defaultProps = {
+//   siteTitle: ``,
+// }
 
 export default Header
