@@ -6,7 +6,7 @@ import styled from 'styled-components'
 import gatsbyLogo from '../images/gatsby-icon.png'
 
 const HeaderWrapper = styled.div`
-  background-color: #524763;
+  background: #524763;
   margin-bottom: 1.45rem;
 `;
 
