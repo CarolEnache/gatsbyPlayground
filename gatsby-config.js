@@ -3,9 +3,11 @@ module.exports = {
     title: `Gatsby Playground`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
+    siteUrl: 'https://brave-kilby-ba0611.netlify.com',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,
